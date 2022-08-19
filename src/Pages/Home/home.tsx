@@ -1,16 +1,32 @@
-import { NavLink } from 'react-router-dom';
-import { ROUTES } from 'Routes';
+import { useNavigate } from 'react-router-dom';
+import { Formik } from 'formik';
 
-export const Home: React.FC = () => {
+import * as Styled from './styled';
+import { FormContent } from './formcontent';
+import { initialValues, validationSchema } from './config';
 
+export const Home= () => {
+    const navigate= useNavigate();
+
+    const handleJoin= (values) => {
+        navigate('/chat', { state:{ username: values.username } });
+    };',';
     return (
         <>
-            <h1>home</h1>
-            <NavLink to={ROUTES.chat}>
-                <button>
-                Enter chat
-                </button>
-            </NavLink>
+            <Styled.HomeWrapper>
+                <Styled.Title>SIMPLE WEBSOCKET CHAT</Styled.Title>
+                <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleJoin}
+                >
+                    {(props) => (
+                        <FormContent
+                            {...props}
+                        />
+                    )}
+                </Formik>
+            </Styled.HomeWrapper>
         </>
     );
 };

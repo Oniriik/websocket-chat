@@ -7,16 +7,16 @@ type ColorStylesType = {
 
 const buttonColors = {
     background: {
-        filled: 'grey',
+        filled: '#325dfa',
         transparent: 'transparent',
     },
     border: {
-        filled: 'grey',
-        transparent: 'grey',
+        filled: '#F0F0F0',
+        transparent: '#F0F0F0',
     },
     text: {
-        filled: 'black',
-        transparent: 'grey',
+        filled: 'white',
+        transparent: '#212121',
     },
 };
 

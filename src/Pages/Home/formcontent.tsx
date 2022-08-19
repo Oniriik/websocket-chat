@@ -1,21 +1,20 @@
 import React from 'react';
 import { Field, FormikProps } from 'formik';
-import { IMessage } from 'Types';
 import { TextInput, Button } from 'Components';
+import { Form } from 'formik';
+import { IUsername } from './config';
 
-import * as Styled from './styled';
-
-export const FormContent: React.FC<FormikProps<IMessage>> = ({ isValid }) => {
+export const FormContent: React.FC<FormikProps<IUsername>> = ({ isValid }) => {
     return (
-        <Styled.Form>
+        <Form>
             <Field
-                name="payload"
+                name="username"
                 type="text"
-                placeholder="Enter your message"
+                placeholder="Enter your username"
                 component={TextInput}
                 errorPosition="bottom" />
             <Button disabled={!isValid} type="submit">
                 Send
             </Button>
-        </Styled.Form>);
+        </Form>);
 };

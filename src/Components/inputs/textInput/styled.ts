@@ -26,7 +26,7 @@ const errorBottomStyles = css`
 
 export const Error = styled.span`
     position: absolute;
-    margin-left: 0;
+    margin-left: 5px;
     transition: margin-left 0.4ms linear;
     transition: bottom 0.4s linear;
     color: red;
@@ -49,9 +49,9 @@ export const Field = styled.input`
     width: 293px;
     min-height: 40px;
     border-radius: 5px;
-    border: 1px solid red;
+    border: 1px solid #F0F0F0;
     padding: 9px 15px;
-    color: red;
+    color: black;
     font-size: 14px;
     height: 1.57;
 
