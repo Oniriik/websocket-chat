@@ -49,6 +49,7 @@ export const MessageWrapper = styled.div`
     border-radius: 0.5rem;
     padding: 1rem;
     ${shadowSm}
+    overflow-y: scroll;
 `;
 
 export const Message = styled.div`
